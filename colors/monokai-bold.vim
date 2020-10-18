@@ -14,11 +14,11 @@ if !has("gui_running") && &t_Co < 256
   finish
 endif
 
-if ! exists("g:monokai_gui_italic")
+if !exists("g:monokai_gui_italic")
     let g:monokai_gui_italic = 1
 endif
 
-if ! exists("g:monokai_term_italic")
+if !exists("g:monokai_term_italic")
     let g:monokai_term_italic = 0
 endif
 
