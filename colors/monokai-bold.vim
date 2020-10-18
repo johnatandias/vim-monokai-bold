@@ -73,6 +73,7 @@ endfunction
 let s:white       = { "gui": "#E8E8E3", "cterm": "252" }
 let s:white2      = { "gui": "#d8d8d3", "cterm": "250" }
 let s:black       = { "gui": "#272822", "cterm": "234" }
+let s:fullblack   = { "gui": "#00000" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "235" }
 let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
 let s:lightblack3 = { "gui": "#3f4145", "cterm": "237" }
@@ -106,7 +107,7 @@ let s:br_purple   = { "gui": "#B77EE0" }
 let s:br_cyan     = { "gui": "#54CED6" }
 let s:br_white    = { "gui": "#FFFFFF" }
 
-" Highlighting 
+" Highlighting
 " ------------
 
 " editor
@@ -174,10 +175,10 @@ call s:h("Type",          { "fg": s:aqua })
 call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
-    
+
 call s:h("Identifier",    { "fg": s:green })
 call s:h("Function",      { "fg": s:green, "format": "bold" })
-                         
+
 call s:h("Statement",     { "fg": s:pink })
 call s:h("Operator",      { "fg": s:pink })
 call s:h("Label",         { "fg": s:pink })
@@ -191,7 +192,7 @@ call s:h("Include",       { "fg": s:pink })
 call s:h("Define",        { "fg": s:pink })
 call s:h("Macro",         { "fg": s:green })
 call s:h("PreCondit",     { "fg": s:green })
-                           
+
 call s:h("Special",       { "fg": s:purple })
 call s:h("SpecialChar",   { "fg": s:pink })
 call s:h("Delimiter",     { "fg": s:pink })
@@ -201,7 +202,7 @@ call s:h("Tag",           { "fg": s:pink })
 
 call s:h("Todo",          { "fg": s:orange,   "format": "bold,italic" })
 call s:h("Comment",       { "fg": s:warmgrey, "format": "italic" })
-                         
+
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
 call s:h("Error",         { "fg": s:red, "bg": s:darkred })
@@ -263,15 +264,23 @@ call s:h("jsBuiltins",          { "fg": s:aqua })
 call s:h("jsArgsObj",           { "fg": s:aqua })
 call s:h("jsStatic",            { "fg": s:aqua })
 call s:h("jsSuper",             { "fg": s:aqua })
-call s:h("jsFuncArgRest",       { "fg": s:purple, "format": "italic" })                                 
-call s:h("jsFuncArgs",          { "fg": s:orange, "format": "italic" })
+call s:h("jsFuncArgRest",       { "fg": s:purple, "format": "italic" })
+call s:h("jsFuncArgs",          { "fg": s:orange })
 call s:h("jsStorageClass",      { "fg": s:aqua })
 call s:h("jsDocTags",           { "fg": s:aqua,   "format": "italic" })
+call s:h("javascriptReserved",  { "fg": s:aqua })
+call s:h("javascriptMethod",    { "fg": s:green })
+call s:h("jsObjectProp",        { "fg": s:white })
+call s:h("jsThis",              { "fg": s:orange })
+call s:h("jsDestructuringBlock",{ "fg": s:orange })
+call s:h("jsObjectKey",         { "fg": s:white })
+call s:h("jsClassMethodType",   { "fg": s:pink })
+call s:h("jsTemplateExpression",{ "fg": s:orange })
 
 " Typescript
-call s:h("typescriptArrowFuncArg",        { "fg": s:orange, "format": "italic" })
-call s:h("typescriptFuncType",            { "fg": s:orange, "format": "italic" })
-call s:h("typescriptCall",                { "fg": s:orange, "format": "italic" })
+call s:h("typescriptArrowFuncArg",        { "fg": s:orange })
+call s:h("typescriptFuncType",            { "fg": s:orange })
+call s:h("typescriptCall",                { "fg": s:orange })
 call s:h("typescriptVariable",            { "fg": s:aqua })
 call s:h("typescriptModule",              { "fg": s:aqua })
 call s:h("typescriptPredefinedType",      { "fg": s:aqua })
@@ -284,6 +293,11 @@ call s:h("typescriptEndColons",           { "fg": s:white })
 call s:h("typescriptObjectLabel",         { "fg": s:green })
 call s:h("typescriptAmbientDeclaration",  { "fg": s:pink })
 call s:h("typescriptTestGlobal",          { "fg": s:pink })
+call s:h("typescriptSpreadOperator",      { "fg": s:pink })
+call s:h("typescriptDotNotation",         { "fg": s:pink })
+call s:h("typescriptTernaryOp",           { "fg": s:pink })
+call s:h("typescriptBinaryOp",            { "fg": s:pink })
+call s:h("typescriptAssign",              { "fg": s:pink })
                                  
 " Html
 call s:h("htmlTag",             { "fg": s:white })
